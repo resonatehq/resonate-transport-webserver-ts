@@ -1,6 +1,6 @@
 # @resonatehq/webserver
 
-`@resonatehq/webserver` allows Resonate workers to expose an in-process webserver. Enabling developers to quickly do proof of concepts without the need of an actuall Resonate server running in a different process.
+`@resonatehq/webserver` enables Resonate workers to expose an in-process web server, allowing developers to rapidly build and test proofs of concept without needing a standalone Resonate server running in a separate process.
 
 ## Quick Start
 
