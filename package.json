@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "@koa/router": "^15.0.0",
-    "@resonatehq/sdk": "^0.9.0",
+    "@resonatehq/sdk": "^0.9.1",
     "koa": "^3.1.1",
     "koa-bodyparser": "^4.4.1"
   }

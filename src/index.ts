@@ -1,8 +1,8 @@
 import type { Server as HttpServer } from "node:http";
 import KoaRouter from "@koa/router";
-import { LocalNetwork, type Network } from "@resonatehq/sdk/dist/src/core";
+import { LocalNetwork } from "@resonatehq/sdk/dist/dev/network";
 import type { ResonateError } from "@resonatehq/sdk/dist/src/exceptions";
-import type { Request, ResponseFor } from "@resonatehq/sdk/dist/src/network/network";
+import type { MessageSource, Network, Request, ResponseFor } from "@resonatehq/sdk/dist/src/network/network";
 import * as util from "@resonatehq/sdk/dist/src/util";
 import Koa, { type Context } from "koa";
 import bodyParser from "koa-bodyparser";
@@ -23,6 +23,11 @@ export class Webserver implements Network {
     this.koa.use(bodyParser());
     this.koa.use(router.routes());
     this.koa.use(router.allowedMethods());
+  }
+
+  getMessageSource(): MessageSource {
+    util.assertDefined(this.network.getMessageSource);
+    return this.network.getMessageSource();
   }
 
   start(): void {
