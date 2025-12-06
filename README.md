@@ -9,7 +9,7 @@
 npm install @resonatehq/webserver
 ```
 
-### Example
+### Run
 
 **app.ts**
 ```ts
@@ -36,7 +36,7 @@ function* fib(ctx: Context, n: number): Generator {
 main();
 ```
 
-### Install the CLI
+Install the CLI:
 ```bash
 brew install resonatehq/tap/resonate
 ```
